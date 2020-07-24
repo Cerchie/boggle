@@ -10,19 +10,22 @@
 <body>
 
     <table class="tg">
-        {% for i in board%}
-        board.insert(<tr></tr>)
-        {% for j in board %}
-        board.insert(<th></th>)
-        {% endfor %}
-        {% endfor %}
+        <tbody>
+            {% for row in board %}
+            <tr>
+                {% for cell in row %}
+                <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
 
 </body>
 <script src="https://unpkg.com/axios/dist/axios.js"></script>
-
 <form action="/" method="POST">
     Make a guess <input type="test">
+    <button type="submit" id="submit-btn">submit answer</button>
 </form>
 
 </html>
