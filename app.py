@@ -19,6 +19,6 @@ boggle_game = Boggle()
 def return_board():
     """return boggle board and render the template"""
 
-    board = Boggle.make_board(self)
+    board = boggle_game.make_board()
 
     return render_template("board.html", board=board)

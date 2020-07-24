@@ -8,9 +8,12 @@
 </head>
 
 <body>
-    for i in {{board}}
-    table.insert(<th>i</th>)
-
+    {% for i in board%}
+    table.insert(<tr>i</tr>)
+    {% for j in board %}
+    table.insert(<th>j</th>)
+    {% endfor %}
+    {% endfor %}
     <table class="tg">
         <thead>
             <tr>
@@ -60,5 +63,9 @@
 
 </body>
 <script src="https://unpkg.com/axios/dist/axios.js"></script>
+
+<form action="/" method="POST">
+    Make a guess <input type="test">
+</form>
 
 </html>
