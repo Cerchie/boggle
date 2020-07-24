@@ -8,57 +8,14 @@
 </head>
 
 <body>
-    {% for i in board%}
-    table.insert(<tr>i</tr>)
-    {% for j in board %}
-    table.insert(<th>j</th>)
-    {% endfor %}
-    {% endfor %}
+
     <table class="tg">
-        <thead>
-            <tr>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-            </tr>
-        </tbody>
+        {% for i in board%}
+        board.insert(<tr></tr>)
+        {% for j in board %}
+        board.insert(<th></th>)
+        {% endfor %}
+        {% endfor %}
     </table>
 
 </body>
