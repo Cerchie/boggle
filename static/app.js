@@ -1,14 +1,17 @@
-async function button() {
-    let $formcontainer = $("#form-container");
-    let $form = $("#form")
-    $formcontainer.on('submit', $form, function (e) {
-        handleSubmit(e);
-        e.preventDefault();
-        console.log('click')
-        return res;
-    });
-}
-button();
+$(".add-word", this.board).on("submit", this.handleSubmit.bind(this));
+
+
+// async function button() {
+//     let $formcontainer = $("#form-container");
+//     let $form = $("#form")
+//     $formcontainer.on('submit', $form, function (e) {
+//         handleSubmit(e);
+//         e.preventDefault();
+//         console.log('click')
+//         return res;
+//     });
+// }
+// button();
 
 // async function getBtnVal() {
 //     let response = await axios.get("/");
@@ -19,10 +22,10 @@ button();
 
 /* handle submission of word: if unique and valid, score & show */
 
-async handleSubmit(e) {
+async function handleSubmit(e) {
     e.preventDefault(); //prevent page from refreshing
-    const $word = $(".word", this.board); //grabs value of word using board for context
-
+    const $word = $(".words", this.board); //grabs value of word using board for context
+    console.log($word)
     let word = $word.val(); //grabbing the val with  jQuery
     if (!word) return;
 
