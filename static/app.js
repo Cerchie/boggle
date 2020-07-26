@@ -1,6 +1,6 @@
-async function button() {
-    let button = document.getElementById("submit-btn");
-    button.addEventListener('click', function (e) {
+function button() {
+    let form = document.getElementById("form");
+    form.on('submit', function (e) {
         e.preventDefault();
         console.log('click')
     });
