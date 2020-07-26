@@ -5,12 +5,12 @@ from unittest import TestCase
 
 
 app = Flask(__name__)
+
+# Ensure that debug mode is *on*
+app.debug = True
+
 app.config['SECRET_KEY'] = "oh-so-secret"
-
-debug = DebugToolbarExtension(app)
-
-app = Flask(__name__)
-
+toolbar = DebugToolbarExtension(app)
 
 boggle_game = Boggle()
 
