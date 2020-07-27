@@ -20,12 +20,24 @@
             {% endfor %}
         </tbody>
     </table>
-    <div id="form-container">
-        <form action="/" method="POST" id="form"></form>
-        Make a guess <input type="test">
-        <button type="submit" id="submit-btn">submit answer</button>
-        </form>
+    <p>
+        Score: <b class="score">0</b>
+        Seconds Left: <b class="timer"></b>
+    </p>
+
+    <form method="POST" class="add-word">
+        Make a guess <input name="word" class="word" autofocus>
+        <button>submit answer</button></form>
+
     </div>
+    <ul class="words">
+        <!-- our JS will words here as they score -->
+    </ul>
+
+    <p class="msg">
+        <!-- our JS will put messages here dynamically -->
+    </p>
+
 </body>
 <script src="https://unpkg.com/axios/dist/axios.js"></script>
 
