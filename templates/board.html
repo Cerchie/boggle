@@ -20,6 +20,10 @@
                 {% endfor %}
             </tbody>
         </table>
+        <p>High Score:
+            <b>{{ highscore }}</b>
+            in {{ nplays }} plays
+        </p>
         <p>
             Score: <b class="score">0</b>
             Seconds Left: <b class="timer"></b>
@@ -29,7 +33,6 @@
             Make a guess <input name="word" class="word" autofocus>
             <button>submit answer</button></form>
 
-        </div>
         <ul class="words">
             <!-- our JS will words here as they score -->
         </ul>
