@@ -1,0 +1,25 @@
+body {
+    background-color: aliceblue;
+    font-family: 'Recursive', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.tg {
+    margin: 30px auto;
+    border: 3px solid antiquewhite;
+    border-radius: 10%;
+}
+
+.td {
+    padding: .75rem;
+}
+
+#button {
+    border: 1px solid black;
+    border-radius: 5%;
+    background-color: antiquewhite;
+    padding: .5rem;
+    font-family: 'Recursive', sans-serif;
+}

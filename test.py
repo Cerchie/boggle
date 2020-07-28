@@ -6,5 +6,17 @@ from boggle import Boggle
 
 class FlaskTests(TestCase):
 
-    # TODO -- write tests for every view function / feature!
+    # GET requests______________________________
 
+
+def test_homepage(self):
+    with app.test_client() as client:
+        resp = client.get('/')
+        html = resp.get_data(as_text=True)
+        self.assertEqual(resp.status_code, 200)
+        self.assertIn('<section id="boggle">', html)
+
+
+# POST and FormData
+
+# Redirects
