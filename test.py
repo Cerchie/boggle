@@ -6,17 +6,29 @@ from boggle import Boggle
 
 class FlaskTests(TestCase):
 
-    # GET requests______________________________
+
+    def setUp(self):
+        self.client = app.test_client()
+        app.config['TESTING'] = True
 
 
-def test_homepage(self):
-    with app.test_client() as client:
-        resp = client.get('/')
-        html = resp.get_data(as_text=True)
-        self.assertEqual(resp.status_code, 200)
-        self.assertIn('<section id="boggle">', html)
+    def test_homepage(self):
+        with app.test_client() as client:
+            resp = client.get('/')
+            html = resp.get_data(as_text=True)
+            self.assertEqual(resp.status_code, 200)
+            self.assertIn('<section id="boggle">', html)
 
 
-# POST and FormData
+    def test_checkword(self):
+        with app.test_client() as client:
+            resp = client.get('/check-word')
+            html = resp.get_data(as_text=True)
+            self.assertEqual(resp.status_code, 200)
 
-# Redirects
+
+    def test_postscore(self):
+        with app.test_client() as client:
+            resp = client.get('/post-score')
+            html = resp.get_data(as_text=True)
+         
